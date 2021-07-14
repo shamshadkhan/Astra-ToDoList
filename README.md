@@ -52,8 +52,7 @@ This will take a few minutes.
   * Click on the `GitHub` in `Deploys from GitHub` to get back to your new repository.
 
 ### 8. Launch GitPod IDE
-- Click the button to launch the GitPod IDE from **YOUR** repository.
-  [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#/your_new_git_repo_url/)
+- [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#/your_new_git_repo_url/)
 * From your GitPod terminal execute the following command
 ```
 git remote -v
