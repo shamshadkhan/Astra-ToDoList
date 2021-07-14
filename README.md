@@ -1,3 +1,13 @@
+<p align="center"><img src="https://www.import.io/wp-content/uploads/2017/10/React-logo.png" width=100 height=50>
+  <img src="https://user-images.githubusercontent.com/12265243/125605180-7260a070-ff8e-4c3c-9859-5c821524edc5.png" width=100 height=50></p>
+  
+<p align="center">
+<a href="https://github.com/facebook/react/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Build Status"></a>
+<a href="https://www.npmjs.com/package/react"><img src="https://circleci.com/gh/facebook/react.svg?style=shield&circle-token=:circle-token" alt="Total Downloads"></a>
+<a href="https://circleci.com/gh/facebook/react"><img src="https://img.shields.io/npm/v/react.svg" alt="Latest Stable Version"></a>
+<a href="https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="License"></a>
+</p>
+
 # TODO + Astra + Cassandra 📒
 
 This is an example React To-Do application using a [DataStax Astra](https://dtsx.io/appdev-7-7) free tier database.
