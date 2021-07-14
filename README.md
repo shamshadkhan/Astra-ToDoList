@@ -11,6 +11,7 @@
 # TODO + Astra + Cassandra 📒
 
 This is an example React To-Do application using a [DataStax Astra](https://dtsx.io/appdev-7-7) free tier database.
+Demo: https://astra-todolist.netlify.app
 <!--- ENDEXCLUDE --->
 
 ![1](https://user-images.githubusercontent.com/12265243/125601578-480fa7a5-0e6d-4b09-8675-1866a79d34f7.PNG)
