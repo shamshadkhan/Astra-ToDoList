@@ -48,7 +48,10 @@ Use the token you previously generated.
 ✅  **Step b:** Configure Environment Variables and Install Dependencies
 
 1. Create a `.env` file and fill it with values from the `.env.sample` file.
-
+```sh
+# configure enviroment
+npm exec astra-setup todos_workshop_db todos
+```
 2. Make sure the package dependencies are installed
 ```sh
 # install dependencies
