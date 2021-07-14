@@ -1,0 +1,25 @@
+tasks:
+  - name: Astra-ToDoList
+    init: |
+      cd /workspace/Astra-ToDoList
+      nvm install node
+      npm install -g npm@latest
+    command: |
+      cd /workspace/Astra-ToDoList
+      echo "Astra-ToDoList gitpod ready - LET'S DO THIS!"
+      npm install
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: false
+    addCheck: true
+    addComment: false
+    addBadge: true
+    addLabel: false
+ports:
+  - port: 8888
+    onOpen: open-preview
+  - port: 3000
+    onOpen: ignore  
