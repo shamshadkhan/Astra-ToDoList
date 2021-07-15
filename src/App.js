@@ -44,7 +44,7 @@ function App() {
 
 	useEffect(() => {
 		getRestTodos();
-	}, [toDoLists]);	
+	}, []);	
 
 	const actions = {
 		addRestTodo: addRestTodo,
