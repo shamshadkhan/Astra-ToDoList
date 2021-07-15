@@ -5,8 +5,8 @@ const addRestTodo = async (todo) => {
     body: stringifiedBody,
     method: "POST",
   });
-
-  return response;
+  let responsejson = await response.json();
+  return responsejson;
 };
 
 // READ

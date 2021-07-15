@@ -5,17 +5,36 @@ import api from './utils/api';
 import uuid from 'node-uuid';
 
 function App() {
-	const [restTodos, setRestTodos] = React.useState([]);
+	const [toDoLists, setToDoLists] = React.useState([]);
+
+	const getRestTodos = async () => {
+		api.getRestTodos().then((toDoLists) => setToDoLists( toDoLists ));
+	};
 
 	const addRestTodo = async (text) => {
-		await api.addRestTodo({
+		const toDoListsArray = [...toDoLists];
+		const item = {
 			id: uuid.v1(),
 			completed: false,
 			text: text,
 			key: 'rest',
-		});
+		}
+		await api.addRestTodo(item);
+		toDoListsArray.push(item);
+		setToDoLists(toDoListsArray);
+	};
 
-    	getRestTodos();
+	const completeRestTodo = async (todo) => {
+		const toDoListsArray = [...toDoLists];
+		const item = {
+			id: todo.id,
+			completed: !todo.completed,
+			text: todo.text,
+		}
+		await api.updateRestTodo(item);
+		const index = toDoListsArray.findIndex(itemlist => itemlist.id === todo.id);
+		toDoListsArray[index]= item;
+		setToDoLists(toDoListsArray);
 	};
 
 	const deleteRestTodo = async (id) => {
@@ -23,49 +42,21 @@ function App() {
 		getRestTodos();
 	};
 
-	const completeRestTodo = async (id, text, completed) => {
-		await api.updateRestTodo({
-			id,
-			text,
-			completed: !completed,
-		});
-
-		getRestTodos();
-	};
-
 	useEffect(() => {
 		getRestTodos();
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
-
-	useEffect(() => {
-		console.log("STATE Change:", restTodos)
-	}, [restTodos]);
-
-	const getRestTodos = async () => {
-		// Reload the todo list from the database to see the latest changes
-		api.getRestTodos().then((restTodos) => setRestTodos( restTodos ));
-	};
-
-	const clearRestCompleted = async () => {
-		let docTodos = api.getRestTodos();
-		docTodos.forEach((todo) => {
-			completeRestTodo(todo.id, todo.text, true);
-		});
-	};
+	}, [toDoLists]);	
 
 	const actions = {
 		addRestTodo: addRestTodo,
 		completeRestTodo: completeRestTodo,
-		clearRestCompleted: clearRestCompleted,
 		getRestTodos: getRestTodos,
 		deleteRestTodo: deleteRestTodo,
 	};
 
 	return (
 		<div className="todos">
-			<Header title="REST todos" addTodo={actions.addRestTodo}  type="rest"/>
-			<TodoList type="rest" todos={restTodos} actions={actions} />
+			<Header title="REST todos" addTodo={actions.addRestTodo} type="rest"/>
+			<TodoList type="rest" todos={toDoLists} actions={actions} />
 		</div>
 	);
 }

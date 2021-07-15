@@ -16,7 +16,7 @@ function Todo (props) {
         className="toggle"
         type="checkbox"
         checked={todo.completed}
-        onChange={() => completeRestTodo(todo.id, todo.text, todo.completed)}
+        onChange={() => completeRestTodo(todo)}
       />
       <label>{todo.text}</label>
       <button className="destroy" onClick={() => deleteRestTodo(todo.id)} />
