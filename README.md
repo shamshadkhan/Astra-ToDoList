@@ -130,3 +130,15 @@ Now that you've hooked everything up, time to deplpoy to production.
   
   You've deployed your app to Netlify!
 
+### Running on your local machine
+1. Create a `.env` file and fill it with values from the `.env.sample` file.
+Use the token you previously generated.
+2. Make sure the package dependencies are installed
+```sh
+npm install
+```
+
+3. Then, start the app in dev mode. Changes in the `src` or `functions` directories will trigger reloads.
+```sh
+npm run dev
+```
