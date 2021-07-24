@@ -25,12 +25,13 @@ Demo: https://astra-todolist.netlify.app
 
 -----------------------------------------
 ### 1. Login or Register to AstraDB and create database
-Use the following values when creating the database
+**Use the following values when creating the database**
+|Field| Value|
+|---|---|
+|**database name**| `todos_workshop_db` |
+|**keypace**| `todos` |
+|**Cloud Provider**| *Use the one you like, click a cloud provider logo,  pick an Area in the list and finally pick a region.* |
 
-Field:	Value
-database name: todos_workshop_db
-keypace: todos
-Cloud Provider	Use the one you like, click a cloud provider logo, pick an Area in the list and finally pick a region.
 ![1](https://user-images.githubusercontent.com/12265243/124930324-e7031b00-e009-11eb-93ce-6c9cf3d405a9.PNG)
 ### 2. Create a security token
 for privacy reasons the secure data are hidden
